@@ -165,7 +165,7 @@ export default function ApplianceHealth() {
               </button>
               <button
                 onClick={() => {
-                  alert('✅ Maintenance scheduled!');
+                  alert('✅ Maintenance has been scheduled!');
                   setModalOpen(false);
                 }}
                 className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
