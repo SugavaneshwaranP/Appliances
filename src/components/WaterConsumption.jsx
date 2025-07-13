@@ -77,7 +77,7 @@ export default function WaterConsumption() {
 
       {leakDetected && (
         <div className="bg-red-200 text-red-800 p-3 mb-4 rounded font-semibold animate-pulse">
-          🚨 Leak Detected! Please check your pipes.
+          🚨 Leak Detected! check your pipes.
         </div>
       )}
 
