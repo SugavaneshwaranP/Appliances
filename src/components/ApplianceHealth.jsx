@@ -154,7 +154,7 @@ export default function ApplianceHealth() {
           <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-80 shadow-xl">
             <h3 className="text-lg font-bold mb-3">🛠️ Schedule Maintenance</h3>
             <p className="text-sm mb-4">
-              You are scheduling maintenance for <strong>{selectedAppliance}</strong>. Confirm?
+              You are Schedule maintenance for <strong>{selectedAppliance}</strong>. Confirm?
             </p>
             <div className="flex justify-end gap-3">
               <button
