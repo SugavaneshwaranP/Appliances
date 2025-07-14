@@ -94,7 +94,7 @@ export default function ApplianceOverview() {
             )}
 
             <div className="mt-2 text-sm text-gray-700">
-              Energy: 
+              Energy:
               <span className="font-semibold ml-1">
                 {showCost ? `₹ ${(appliance.usage * 6.5).toFixed(2)}` : `${appliance.usage} kWh`}
               </span>
