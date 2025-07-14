@@ -76,7 +76,7 @@ export default function AlertsPanel() {
       <audio ref={audioRef} src="godrej\public\mixkit-game-notification-wave-alarm-987.wav" preload="auto" />
       
       <div className="flex justify-between items-center mb-5">
-        <h2 className="text-2xl font-bold text-red-700 dark:text-red-400">🚨 Alerts and Notifications</h2>
+        <h2 className="text-2xl font-bold text-red-700 dark:text-red-400">🚨 Alerts & Notifications</h2>
         <Link to="/" className="text-sm text-blue-500 hover:underline">← Back</Link>
       </div>
 
