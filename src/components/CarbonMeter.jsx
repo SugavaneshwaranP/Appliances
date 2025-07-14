@@ -11,7 +11,7 @@ export default function SustainGoals() {
   return (
     <div className="p-6 max-w-3xl mx-auto bg-white rounded-xl shadow-lg">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold text-emerald-700">🌱 Sustainability Goals</h2>
+        <h2 className="text-xl font-bold text-emerald-700">🌱 Goals</h2>
         <Link to="/dashboard" className="text-sm text-blue-500 hover:underline">← Back</Link>
       </div>
 
