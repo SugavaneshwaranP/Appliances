@@ -20,7 +20,7 @@ export default function ApplianceControls() {
   return (
     <div className="p-6 max-w-3xl mx-auto bg-white rounded-xl shadow-lg">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold text-indigo-700">🎛️ Appliance Controls</h2>
+        <h2 className="text-xl font-bold text-indigo-700">🎛️ Appliance Control</h2>
         <Link to="/dashboard" className="text-sm text-blue-500 hover:underline">← Back</Link>
       </div>
 
