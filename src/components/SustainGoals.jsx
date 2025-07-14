@@ -81,7 +81,7 @@ export default function SustainGoals() {
             to="/dashboard"
             className="text-sm text-blue-500 hover:underline"
           >
-            ← Back
+             Back
           </Link>
         </div>
       </div>
