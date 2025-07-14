@@ -136,7 +136,7 @@ export default function EnergyUsageChart() {
             alert('🔗 Shareable chart link copied!');
           }}
             className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 text-xs rounded shadow">
-            📤 Share Chart
+            📤 Share
           </button>
         </div>
       </div>
