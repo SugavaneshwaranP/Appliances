@@ -31,7 +31,7 @@ const [language, setLanguage] = useState('en-IN'); // Default English
     if (!form.appliance || !form.time) return;
     const conflict = detectConflict(form.time);
     if (conflict) {
-      setConflictAlert(`⛔ Conflict: ${conflict.appliance} already scheduled at ${conflict.time}`);
+      setConflictAlert(`⛔ Conflict: ${conflict.appliance} already schedule at ${conflict.time}`);
       return;
     }
     setSchedules([...schedules, { ...form, id: Date.now() }]);
