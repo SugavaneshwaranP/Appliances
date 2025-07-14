@@ -25,7 +25,7 @@ export default function Dashboard() {
           to="/"
           className="text-sm bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
         >
-          ← Back to Home
+          Home
         </Link>
       </div>
 
