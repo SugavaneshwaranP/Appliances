@@ -97,10 +97,7 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-white py-6 text-center text-sm text-gray-500">
-        &copy; 2025 Godrej Sustain+ · Designed with Sustainability in Mind 🌿
-      </footer>
+    
     </div>
   );
 }
