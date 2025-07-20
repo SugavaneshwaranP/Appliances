@@ -11,7 +11,6 @@ export default function SustainGoals() {
   const [newGoal, setNewGoal] = useState({ goal: '', progress: 0 });
   const [darkMode, setDarkMode] = useState(false);
 
-  // Simulate real-time progress updates
   useEffect(() => {
     const interval = setInterval(() => {
       setGoals((prev) =>
@@ -24,12 +23,10 @@ export default function SustainGoals() {
     return () => clearInterval(interval);
   }, []);
 
-  // Handle new goal input
   const handleInputChange = (e) => {
     setNewGoal({ ...newGoal, [e.target.name]: e.target.value });
   };
 
-  // Add new goal
   const addGoal = (e) => {
     e.preventDefault();
     if (newGoal.goal && newGoal.progress >= 0) {
@@ -46,7 +43,6 @@ export default function SustainGoals() {
     }
   };
 
-  // Export goals to CSV
   const exportToCSV = () => {
     const csv = [
       'Goal,Progress',
@@ -56,45 +52,45 @@ export default function SustainGoals() {
     saveAs(blob, 'sustainability_goals.csv');
   };
 
-  // Toggle dark mode
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
   return (
     <div
-      className={`p-6 max-w-3xl mx-auto rounded-xl shadow-lg transition-colors ${
-        darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'
+      className={`p-6 max-w-3xl mx-auto rounded-xl shadow-xl transition-colors duration-500 ${
+        darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
       }`}
     >
       {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold text-emerald-700 dark:text-emerald-300">
-          Sustainability Goals
-        </h2>
-        <div className="flex gap-4">
+      <div className="flex justify-between items-center mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-500 text-white p-4 rounded-xl shadow-md">
+        <h2 className="text-2xl font-bold">🌱 Sustainability Goals</h2>
+        <div className="flex gap-3">
           <button
             onClick={toggleDarkMode}
-            className="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-600 rounded hover:bg-gray-300 dark:hover:bg-gray-500"
+            className="text-sm px-3 py-1 bg-white text-gray-800 rounded shadow hover:bg-gray-100"
           >
-            {darkMode ? 'Light' : 'Dark'} Mode
+            {darkMode ? '☀️ Light' : '🌙 Dark'}
           </button>
           <Link
             to="/dashboard"
-            className="text-sm text-blue-500 hover:underline"
+            className="text-sm underline hover:text-yellow-300"
           >
-             Back
+            ← Back
           </Link>
         </div>
       </div>
 
       {/* Goal Creation Form */}
-      <form onSubmit={addGoal} className="mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <form
+        onSubmit={addGoal}
+        className="mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4"
+      >
         <input
           type="text"
           name="goal"
-          placeholder="New Goal"
+          placeholder="Enter new goal"
           value={newGoal.goal}
           onChange={handleInputChange}
-          className="border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
+          className="border px-3 py-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white"
         />
         <input
           type="number"
@@ -104,41 +100,48 @@ export default function SustainGoals() {
           onChange={handleInputChange}
           min="0"
           max="100"
-          className="border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
+          className="border px-3 py-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-gray-700 dark:text-white"
         />
         <button
           type="submit"
-          className="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700"
+          className="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 shadow-md transition"
         >
-          Add Goal
+          ➕ Add Goal
         </button>
       </form>
 
       {/* Goals List */}
       <ul className="space-y-6">
         {goals.map(({ id, goal, progress, color }) => (
-          <li key={id}>
-            <div className="mb-1 font-medium">{goal}</div>
-            <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-4 shadow-inner">
-              <div
-                className={`h-4 rounded-full ${color}`}
-                style={{ width: `${progress}%` }}
-              ></div>
+          <li
+            key={id}
+            className="p-4 rounded-lg shadow-md bg-white dark:bg-gray-800 border dark:border-gray-700"
+          >
+            <div className="flex justify-between mb-2">
+              <span className="font-medium">{goal}</span>
+              <span className="text-sm text-gray-500 dark:text-gray-300">
+                {progress.toFixed(1)}%
+              </span>
             </div>
-            <div className="text-right text-xs text-gray-500 dark:text-gray-300 mt-1">
-              {progress.toFixed(1)}% Achieved
+            <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-4 overflow-hidden">
+              <div
+                className={`h-4 ${color} transition-all duration-700 ease-in-out`}
+                style={{ width: `${progress}%` }}
+              />
             </div>
           </li>
         ))}
       </ul>
 
       {/* Export Button */}
-      <button
-        onClick={exportToCSV}
-        className="mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-      >
-        Export to CSV
-      </button>
+      <div className="text-center mt-8">
+        <button
+          onClick={exportToCSV}
+          className="bg-blue-600 hover:bg-blue-700 transition px-5 py-2 rounded text-white shadow-lg"
+        >
+          📥 Export to CSV
+        </button>
+      </div>
     </div>
   );
 }
