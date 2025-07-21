@@ -128,7 +128,7 @@ export default function AlertsPanel() {
                 onClick={() => dismissAlert(alert.id)}
                 className="text-xs text-red-500 hover:text-red-700"
               >
-                ✖ Dismiss
+                 Dismiss
               </button>
             </li>
           ))
