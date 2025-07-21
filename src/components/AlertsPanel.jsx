@@ -139,7 +139,7 @@ export default function AlertsPanel() {
       </ul>
 
       <div className="mt-6 text-xs text-gray-500 text-center dark:text-gray-400">
-        📊 Tip: Customize alert thresholds and snooze non-critical alerts.
+          Tip: Customize alert thresholds and snooze non-critical alerts.
       </div>
     </div>
   );
