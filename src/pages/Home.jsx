@@ -24,7 +24,7 @@ export default function Home() {
         
         <div className="relative z-10 max-w-4xl mx-auto">
           <h2 className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-green-700 via-blue-600 to-green-500 animate-fade-in-down">
-            Smart Living, Sustainable Future
+            Smart Living, Sustainable Future..!!
           </h2>
           <p className="mt-4 text-lg md:text-xl text-gray-700 animate-fade-in-up">
             Track and reduce your energy & water usage with intelligent appliances.
