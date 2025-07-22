@@ -86,7 +86,7 @@ recognition.lang = language;
           synth.speak(msg);
         }, 500);
       } else {
-        alert('❌ Could not understand. Try: "Schedule AC at 6 PM"');
+        alert(' Could not understand. Try: "Schedule AC at 6 PM"');
       }
     };
 
