@@ -13,13 +13,13 @@ export default function SustainGoals() {
       <div className="max-w-4xl mx-auto rounded-2xl shadow-2xl backdrop-blur-lg bg-white/10 p-6">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-600 animate-pulse">
-            🌱 Sustainability Goals
+             Sustainability Goals
           </h2>
           <Link
             to="/dashboard"
             className="px-4 py-2 text-sm font-semibold rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 text-white hover:from-blue-700 hover:to-blue-500 shadow-md hover:shadow-lg transition-all duration-300"
           >
-            ← Back
+             Back
           </Link>
         </div>
 
