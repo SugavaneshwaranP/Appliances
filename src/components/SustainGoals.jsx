@@ -62,7 +62,7 @@ export default function SustainGoals() {
     >
       {/* Header */}
       <div className="flex justify-between items-center mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-500 text-white p-4 rounded-xl shadow-md">
-        <h2 className="text-2xl font-bold">🌱 Sustainability Goals</h2>
+        <h2 className="text-2xl font-bold">Sustainability Goals</h2>
         <div className="flex gap-3">
           <button
             onClick={toggleDarkMode}
