@@ -81,7 +81,6 @@ export default function WaterConsumption() {
         </div>
       )}
 
-      {/* Controls */}
       <div className="flex flex-wrap justify-between items-center gap-3 mb-5">
         <div className="flex gap-2">
           <select value={mode} onChange={e => setMode(e.target.value)} className="border px-3 py-1 rounded text-sm">
