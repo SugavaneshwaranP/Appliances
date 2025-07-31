@@ -93,7 +93,7 @@ export default function Home() {
           to="/dashboard"
           className="mt-8 inline-block bg-white text-green-700 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition animate-bounce"
         >
-          Explore more
+          Explore more                        
         </Link>
       </section>
 
